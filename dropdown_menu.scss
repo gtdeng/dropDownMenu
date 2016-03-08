@@ -1,0 +1,62 @@
+$width: 200px;
+$height: 70px;
+
+@mixin menu {
+  width: $width;
+  height: $height;
+  border: 1px solid black;
+}
+
+html {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item-0 {
+  @include menu;
+  background-color: pink;
+}
+
+.menu-item-1 {
+  @include menu;
+  background-color: violet;
+  top: -$height;
+}
+
+.menu-item-2 {
+  @include menu;
+  background-color: lightgreen;
+  top: -$height;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  padding: 0;
+  vertical-align: middle;
+}
+
+li {
+  display: block;
+  position: relative;
+  text-align: center;
+  line-height: $height;
+  >ul {
+    display: none;
+    position: relative;
+    left: $width;
+  }
+  &:hover {
+    >ul {
+      display: block;
+    }
+  }
+}
