@@ -26,3 +26,4 @@ CSS requirements:
   - All text must be vertically aligned in the middle and horizontally aligned
     in the middle.
 
+![alt tag](https://github.com/gtdeng/dropDownMenu/blob/master/dropdown.png)
